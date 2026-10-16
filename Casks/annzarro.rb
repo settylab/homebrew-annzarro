@@ -1,9 +1,9 @@
 cask "annzarro" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.5.1"
-  sha256 arm:   "e4bfa0e94c8990b859984c0fd7103a8ccc809c7f7bfbb805074a022b2cc18291",
-         intel: "91bfcb9a6c5c62fb5ebf035bf72a5f30229c94647c4667203fc260a22f4d41aa"
+  version "0.5.3"
+  sha256 arm:   "c52dd20e2c4229a865cef78115f558f13a18365bad54624ebb667d12bb51ad0e",
+         intel: "e978c406b537d9a8f7bdb5da82611fb5fa96ba69927d32895a47b45e696a7757"
 
   url "https://github.com/settylab/annzarro/releases/download/v#{version}/AnnZarro-#{version}-macos-#{arch}.dmg"
   name "AnnZarro"
@@ -15,9 +15,8 @@ cask "annzarro" do
     strategy :github_latest
   end
 
-  # Set to true once the app updates itself (electron-updater ships). One-line change here
-  # and in packaging/homebrew/annzarro.rb.template; then Homebrew leaves upgrades to the app.
-  auto_updates false
+  # The app updates itself (electron-updater), so Homebrew leaves upgrades to it.
+  auto_updates true
   depends_on macos: :ventura
 
   app "AnnZarro.app"
