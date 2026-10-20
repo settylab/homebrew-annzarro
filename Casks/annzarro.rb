@@ -1,9 +1,9 @@
 cask "annzarro" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.6.1"
-  sha256 arm:   "b7463469f44d1b4726c30a631af42b7603f4cfd1a744f296431727c513916069",
-         intel: "24f2411fc0c0eaa6291ad71efec8679abc3629a0c6d5cded9cb87bd459f72e40"
+  version "0.6.2"
+  sha256 arm:   "d99fa085ea20c3100d04437a4cad5103683c2ab14a15b666d9b85813a1130988",
+         intel: "75ee8d1d63658cd26fb98805af52e4937d1db68324d2bfd930a86d60c223c3fa"
 
   url "https://github.com/settylab/annzarro/releases/download/v#{version}/AnnZarro-#{version}-macos-#{arch}.dmg"
   name "AnnZarro"
